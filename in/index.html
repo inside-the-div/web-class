@@ -1,0 +1,11 @@
+1. mysqli_connect($host,$user,$pass,$database_name);
+2. select min(salaray) form employee where salaray in (select salaray form employee order by salaray desc limit 2)
+3. 
+
+<!-- self join -->
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
